@@ -1,10 +1,10 @@
 # Nintendo_Switch_ProCon_Emulator
 
-BareMetal, up to the point where switch can recognize it as a controller.  
-Need to enable pro controller wired mode.  
-Some lib files supplied by stm32cubemx have been modified.  
+After refactoring, now all important code are in /core/src/ns_con_device.c and its header, while still depends on a clean copy of stm32 sub device lib.  
 
-The whole thing is basically a replay attack.  
-The “HID” report structure is header + button + joystick + IMU data. Look at reference and capture folder for more hints.  
+The example project is half of my implementation of steam controller to switch pro controller.  
 
-https://github.com/shinyquagsire23/HID-Joy-Con-Whispering and https://github.com/FrotBot/SwitchProConLinuxUSB/blob/master/src/procon.hpp are helpful references.  
+The whole thing is basically a replay attack.   
+
+The “HID” report structure is header + button + joystick + IMU data. Look at capture folder and https://github.com/FrotBot/SwitchProConLinuxUSB/blob/master/src/procon.hpp for more hints.  
+
